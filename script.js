@@ -9,3 +9,6 @@ const name = 'Василий';
 const admin = name;
 
 console.log(admin);
+
+//Third task
+//Чему будет равно JS-выражение 1000 + "108"? 1000108
