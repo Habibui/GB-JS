@@ -12,3 +12,18 @@ alert(b);                    // 3 выше дважды увеличили на 
 
 var a = 2;
 var x = 1 + (a *= 2);        // x будет равен 5 поскольку используя оператор *= мы умножили а на 2 и сохранили результат в а
+
+// Задание 3
+
+const a = -15;
+const b = 5;
+
+if (a >= 0 && b >= 0 && a > b) {
+    console.log(a - b);
+} else if (a >= 0 && b >= 0 && a < b) {
+    console.log(b - a);
+} else if (a < 0 && b < 0) {
+    console.log(a * b);
+} else {
+    console.log(a + b);
+}
