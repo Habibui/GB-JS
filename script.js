@@ -71,7 +71,7 @@ switch (a) {
 // Задание 5
 
 function sum(a, b) {
-    console.log(a + b);
+    console.log(a + b);         // достаточно ли было не используй console.log?
     return (a + b);
 }
 
@@ -94,3 +94,44 @@ function division(a, b) {
     console.log(a / b);
     return (a / b);
 }
+
+// Задание 6
+
+//Первый вариант рещения
+function simpleCalculator(arg1, arg2, operation) {
+    switch (operation) {
+        case 'sum': return arg1 + arg2;
+        case 'substraction': return arg1 - arg2;
+        case 'multiplacation': return arg1 * arg2;
+        case 'division': return arg1 / arg2;
+        default: return 'Ошибка! Проверить вводимые данные'
+    }
+}
+
+// Второй вариант решения
+let firstNumber = +prompt('Введите первое число');
+let secondNumber = +prompt('Введите второе число');
+let mathOperation = prompt('Введите "addition" для сложения, "substraction" для вычитания, "multiplacation" для умножения, "division" для деления')
+
+function simpleCalculator(arg1, arg2, operation) {
+    switch (operation) {
+        case 'addition':
+            console.log(arg1 + arg2);
+            return arg1 + arg2;
+        case 'substraction':
+            console.log(arg1 - arg2);
+            return arg1 - arg2;
+        case 'multiplacation':
+            console.log(arg1 * arg2);
+            return arg1 * arg2;;
+        case 'division':
+            console.log(arg1 / arg2);
+            return arg1 / arg2;
+        default: return 'Ошибка! Проверить вводимые данные'
+    }
+}
+
+simpleCalculator(firstNumber, secondNumber, mathOperation);
+
+// Второй вариант мне кажется более предпочтителен. Требуется оценка преподавателя
+
