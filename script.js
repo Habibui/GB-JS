@@ -135,3 +135,9 @@ simpleCalculator(firstNumber, secondNumber, mathOperation);
 
 // Второй вариант мне кажется более предпочтителен. Требуется оценка преподавателя
 
+
+// Задание 8
+function power(val, pow) {
+    return n == 1 ? val : (val * power(val, pow - 1))
+}
+
