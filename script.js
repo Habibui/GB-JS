@@ -15,8 +15,8 @@ var x = 1 + (a *= 2);        // x будет равен 5 поскольку и�
 
 // Задание 3
 
-const a = -15;
-const b = 5;
+let a = -15;
+let b = 5;
 
 if (a >= 0 && b >= 0 && a > b) {
     console.log(a - b);
@@ -30,7 +30,7 @@ if (a >= 0 && b >= 0 && a > b) {
 
 // Задание 4
 
-const a = 10;
+let a = 10;
 
 switch (a) {
     case 0:
@@ -66,4 +66,31 @@ switch (a) {
     case 15:
         console.log(15);
         break;                  // код работает и без break, но на всякий случай оставил
+}
+
+// Задание 5
+
+function sum(a, b) {
+    console.log(a + b);
+    return (a + b);
+}
+
+function substraction(a, b) {   // сделал дополнительное условие для себя, чтобы результат был положительным числом
+    if (a >= b) {
+        console.log(a - b);
+        return a - b;
+    } else {
+        console.log(b - a);
+        return (b - a);
+    }
+}
+
+function multiplacation(a, b) {
+    console.log(a * b);
+    return (a * b);
+}
+
+function division(a, b) {
+    console.log(a / b);
+    return (a / b);
 }
