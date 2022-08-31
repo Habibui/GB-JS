@@ -1,11 +1,17 @@
 // Задание 1
 
-/*let i = 0;
+/*
+let i = 2;
 
-while (i <= 100) {
-    console.log(i)
-    i++;
-}*/
+while (i > 0 && i <= 100) {
+  if (i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
+    console.log(i);
+  } else if (i == 2 || i == 3 || i == 5 || i == 7) {
+    console.log(i);
+  }
+  i++;
+}
+*/
 
 // Задание 2
 
