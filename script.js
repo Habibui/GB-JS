@@ -1,7 +1,7 @@
 // Задание 1
 
 /*function myFn(userNumber) {
-  if (userNumber < 999) {
+  if (0 < userNumber && userNumber < 999) {
     const stats = {
         'units': Math.floor(userNumber % 10),
         'dozens': Math.floor(userNumber % 100 / 10),
@@ -16,29 +16,31 @@
 
 // Задание 2
 
-let objBasket = [{
-  name: 'apple',
-  count: 1,
-  price: 50
-},
-{
-  name: 'pineapple',
-  count: 2,
-  price: 70
-},
-{
-  name: 'banan',
-  count: 1,
-  price: 30
-}]
+let obj = {
+  basket: [{
+    name: 'apple',
+    count: 1,
+    price: 50
+  },
+  {
+    name: 'pineapple',
+    count: 2,
+    price: 70
+  },
+  {
+    name: 'banan',
+    count: 1,
+    price: 30
+  }],
 
-function countBasketPrice() {
-  let totalSum = 0;
-  for (let index = 0; index < objBasket.length; index++) {
-    totalSum += objBasket[index].count * objBasket[index].price;
+  countBasketPrice: function () {
+    let totalSum = 0;
+    for (let index = 0; index < this.basket.length; index++) {
+      totalSum += this.basket[index].count * this.basket[index].price;
+    }
+    console.log(totalSum);
+    return totalSum;
   }
-  console.log(totalSum);
-  return totalSum;
 }
 
-countBasketPrice();
+obj.countBasketPrice();
