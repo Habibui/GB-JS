@@ -1,37 +1,39 @@
 // Задание 1
 
-/*
-const board = {
-  const cell = document.createElement('div'),
-  rowCount: 8;
-  colCount: 8
-};
+const gridStyle = `display: grid;
+    grid-template-columns : 20px  repeat(8, 50px);
+    grid-template-rows: 20px repeat(8, 50px);
+    justify-items: center;
+    align-items: center;`
 
 function makeChessBoard() {
-const board = document.createElement('div');
+  const board = document.createElement('div')
+  board.style = gridStyle
 
-let isBlack = true;
-for (let y = 0; y < 9; y++) {
-  for (let x = 0; x < 9; X++) {
-    const cell = document.createElement('div');
-    let color = 'white'
-    if (isBlack) {
-      color = 'black';
-            isBlack = false;
-    } else {
-      isBlack = true;
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+      const cell = document.createElement('div')
+      if (i === 0 || j === 0) {
+        cell.innerText = (j) ? String.fromCharCode(64 + j) : i || ""
+      } else {
+        cell.style.width = "100%"
+        cell.style.height = "100%"
+        if (i % 2) cell.style.backgroundColor = j % 2 ? '#f1d264' : '#4f3e07'
+        else cell.style.backgroundColor = !(j % 2) ? '#f1d264' : '#4f3e07'
+      }
+      board.appendChild(cell)
     }
   }
-}
+  document.body.prepend(board)
 }
 
-makeChessBoard();
-*/
+makeChessBoard()
+
 
 
 // Задание 2
 
-let obj = {
+/*let obj = {
   basket: [{
     name: 'apple',
     count: 1,
@@ -67,4 +69,4 @@ let obj = {
   }
 }
 
-obj.basketRender();
+obj.basketRender();*/
