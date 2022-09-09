@@ -1,17 +1,32 @@
 // Задание 1
 
-/*function myFn(userNumber) {
-  if (0 < userNumber && userNumber < 999) {
-    const stats = {
-        'units': Math.floor(userNumber % 10),
-        'dozens': Math.floor(userNumber % 100 / 10),
-        'hundreds': Math.floor(userNumber / 100)
-        }
-        return stats;
-  } else {
-        console.log('введено некорректное число')
+/*
+const board = {
+  const cell = document.createElement('div'),
+  rowCount: 8;
+  colCount: 8
+};
+
+function makeChessBoard() {
+const board = document.createElement('div');
+
+let isBlack = true;
+for (let y = 0; y < 9; y++) {
+  for (let x = 0; x < 9; X++) {
+    const cell = document.createElement('div');
+    let color = 'white'
+    if (isBlack) {
+      color = 'black';
+            isBlack = false;
+    } else {
+      isBlack = true;
+    }
   }
-}*/
+}
+}
+
+makeChessBoard();
+*/
 
 
 // Задание 2
@@ -40,7 +55,16 @@ let obj = {
     }
     console.log(totalSum);
     return totalSum;
+  },
+
+  basketRender: function () {
+    let myBasket = document.querySelector(".basket");
+    if (this.basket.length != null) {
+      console.log(`В корзине: ${this.basket.length} товаров на сумму  ${this.countBasketPrice()} рублей`);
+    } else {
+      console.log('Корзина пуста');
+    }
   }
 }
 
-obj.countBasketPrice();
+obj.basketRender();
